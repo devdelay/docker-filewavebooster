@@ -1,7 +1,7 @@
 version: '3'
 services:
     fwbooster:
-        image: nielshojen/filewavebooster
+        image: nielshojen/filewavebooster:13.0.1
         container_name: fwbooster
         volumes:
             - fwbooster:/var/FWBooster
@@ -11,12 +11,12 @@ services:
             - "20013:20013"
             - "20014:20014"
         environment:
-            - FWBOOSTER_NAME="fwbooster"
-            - FWBOOSTER_LOCATION="external"
-            - FWSERVER1_ADDRESS="filewave.docker.sauce"
-            - FWBOOSTER_PASSWORD='filewave'
-            - FWBOOSTER_SSLLOADER="1"
-            - FWBOOSTER_FREEDISKSPACELIMIT="500"
+            - FWBOOSTER_NAME=fwbooster
+            - FWBOOSTER_LOCATION=external
+            - FWSERVER1_ADDRESS=filewave.docker.sauce
+            - FWBOOSTER_PASSWORD=filewave
+            - FWBOOSTER_SSLLOADER=1
+            - FWBOOSTER_FREEDISKSPACELIMIT=500
         restart: always
 volumes:
   fwbooster:
