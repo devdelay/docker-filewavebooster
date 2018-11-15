@@ -18,3 +18,7 @@ services:
             - FWBOOSTER_SSLLOADER="1"
             - FWBOOSTER_FREEDISKSPACELIMIT="500"
         restart: always
+volumes:
+  fwbooster:
+    external:
+      name: fwbooster
