@@ -5,6 +5,7 @@ services:
         container_name: fwbooster
         volumes:
             - fwbooster:/var/FWBooster
+        network_mode: "host"
         ports:
             - "20003:20003"
             - "20004:20004"
